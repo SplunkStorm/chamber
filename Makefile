@@ -4,14 +4,14 @@ release: gh-release clean dist
 	govendor sync
 	github-release release \
 	--security-token $$GH_LOGIN \
-	--user segmentio \
+	--user splunkcloud \
 	--repo chamber \
 	--tag $(version) \
 	--name $(version)
 
 	github-release upload \
 	--security-token $$GH_LOGIN \
-	--user segmentio \
+	--user splunkcloud \
 	--repo chamber \
 	--tag $(version) \
 	--name chamber-$(version)-darwin-amd64 \
@@ -19,7 +19,7 @@ release: gh-release clean dist
 
 	github-release upload \
 	--security-token $$GH_LOGIN \
-	--user segmentio \
+	--user splunkcloud \
 	--repo chamber \
 	--tag $(version) \
 	--name chamber-$(version)-linux-amd64 \
